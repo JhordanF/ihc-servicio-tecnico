@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App Servicio Tecnico a Domicilio - 12 pantallas</title>
+<style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
+    a { color: #3a3a3a; } a:hover { color: #111111; }
+    .scr { width: 390px; height: 844px; background: #ffffff; display: flex; flex-direction: column; overflow: hidden; }
+    .pad { padding-left: 20px; padding-right: 20px; }
+    .t1 { background: #7d7d7d; height: 14px; border-radius: 1px; flex: none; }
+    .t2 { background: #a8a8a8; height: 10px; border-radius: 1px; flex: none; }
+    .t3 { background: #d2d2d2; height: 8px; border-radius: 1px; flex: none; }
+    .tk { background: #1f1f1f; height: 16px; border-radius: 1px; flex: none; }
+    .tw { background: #ffffff; height: 12px; border-radius: 1px; flex: none; }
+    .card { background: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; }
+    .field { background: #fbfbfb; border: 1px solid #c2c2c2; border-radius: 3px; display: flex; align-items: center; gap: 10px; padding-left: 14px; padding-right: 14px; flex: none; }
+    .btn { background: #3a3a3a; border-radius: 3px; display: flex; align-items: center; justify-content: center; flex: none; }
+    .btn2 { background: #ffffff; border: 1.5px solid #3a3a3a; border-radius: 3px; display: flex; align-items: center; justify-content: center; flex: none; }
+    .ico { background: #d6d6d6; border: 1px solid #b0b0b0; border-radius: 4px; flex: none; }
+    .icok { background: #3a3a3a; border: 1px solid #3a3a3a; border-radius: 4px; flex: none; }
+    .avat { background: #dcdcdc; border: 1px solid #b0b0b0; border-radius: 50%; flex: none; }
+    .img { background: #ebebeb; border: 1px solid #bdbdbd; overflow: hidden; flex: none; }
+    .img > svg { display: block; }
+    .row { display: flex; align-items: center; }
+    .col { display: flex; flex-direction: column; }
+    .sep { height: 1px; background: #dcdcdc; flex: none; }
+    .hdr { height: 56px; border-bottom: 1px solid #e0e0e0; display: flex; align-items: center; gap: 14px; flex: none; }
+    .navbar { height: 70px; border-top: 1px solid #d0d0d0; background: #f7f7f7; display: flex; align-items: center; justify-content: space-around; flex: none; }
+    .chip { border: 1px solid #c2c2c2; background: #f7f7f7; border-radius: 15px; height: 30px; display: flex; align-items: center; padding-left: 12px; padding-right: 12px; flex: none; }
+    .chipOn { border: 1px solid #3a3a3a; background: #3a3a3a; border-radius: 15px; height: 30px; display: flex; align-items: center; padding-left: 12px; padding-right: 12px; flex: none; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: #d0d0d0; border: 1px solid #b0b0b0; flex: none; }
+    .dotOn { width: 12px; height: 12px; border-radius: 50%; background: #2b2b2b; border: 1px solid #2b2b2b; flex: none; }
+  
+    .sheet { display: flex; flex-wrap: wrap; gap: 56px 40px; padding: 48px; background: #fafafa; width: 1832px; }
+    .frame { display: flex; flex-direction: column; gap: 12px; }
+    .label { font: 600 13px/1 system-ui, sans-serif; color: #6b6b6b; letter-spacing: 0.4px; }
+    .scr { border: 1px solid #d5d5d5; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="frame"><div class="label">01 - Ingreso</div>
+<div class="scr">
+  <div class="col" style="flex: 1; padding: 76px 28px 0 28px; gap: 40px">
+    <div class="col" style="gap: 16px; align-items: center">
+      <div class="img" style="width: 88px; height: 88px; border-radius: 6px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+      <div class="t1" style="width: 186px; height: 18px"></div>
+      <div class="col" style="gap: 7px; align-items: center">
+        <div class="t3" style="width: 248px"></div>
+        <div class="t3" style="width: 186px"></div>
+      </div>
+    </div>
+    <div class="col" style="gap: 18px">
+      <div class="col" style="gap: 8px">
+        <div class="t2" style="width: 54px; height: 8px"></div>
+        <div class="field" style="height: 50px"><div class="ico" style="width: 18px; height: 18px"></div><div class="t3" style="width: 124px"></div></div>
+      </div>
+      <div class="col" style="gap: 8px">
+        <div class="t2" style="width: 76px; height: 8px"></div>
+        <div class="field" style="height: 50px"><div class="ico" style="width: 18px; height: 18px"></div><div class="t3" style="width: 86px"></div><div style="flex: 1"></div><div class="ico" style="width: 18px; height: 18px"></div></div>
+      </div>
+      <div class="t3" style="width: 112px; align-self: flex-end"></div>
+    </div>
+    <div class="col" style="gap: 22px">
+      <div class="btn" style="height: 52px"><div class="tw" style="width: 94px"></div></div>
+      <div class="row" style="gap: 12px"><div class="sep" style="flex: 1"></div><div class="t3" style="width: 28px"></div><div class="sep" style="flex: 1"></div></div>
+      <div class="col" style="gap: 12px">
+        <div class="btn2" style="height: 48px; gap: 12px"><div class="ico" style="width: 20px; height: 20px"></div><div class="t2" style="width: 108px"></div></div>
+        <div class="btn2" style="height: 48px; gap: 12px"><div class="ico" style="width: 20px; height: 20px"></div><div class="t2" style="width: 132px"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="justify-content: center; gap: 8px; height: 64px; border-top: 1px solid #e6e6e6; flex: none">
+    <div class="t3" style="width: 118px"></div>
+    <div class="t1" style="width: 68px; height: 10px"></div>
+  </div>
+</div>
+  </div>
+  <div class="frame"><div class="label">02 - Registro</div>
+<div class="scr">
+  <div class="hdr pad"><div class="ico" style="width: 24px; height: 24px"></div><div class="t1" style="width: 128px"></div></div>
+  <div class="col pad" style="flex: 1; padding-top: 24px; gap: 26px">
+    <div class="col" style="gap: 12px">
+      <div class="t2" style="width: 148px"></div>
+      <div class="row" style="gap: 12px">
+        <div class="col" style="flex: 1; gap: 10px; align-items: center; padding: 16px 8px; border: 2px solid #2b2b2b; border-radius: 4px; background: #f0f0f0">
+          <div class="img" style="width: 44px; height: 44px; border-radius: 4px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+          <div class="t1" style="width: 62px; height: 10px"></div>
+          <div class="t3" style="width: 86px; height: 6px"></div>
+        </div>
+        <div class="col" style="flex: 1; gap: 10px; align-items: center; padding: 16px 8px; border: 1px solid #cccccc; border-radius: 4px; background: #ffffff">
+          <div class="img" style="width: 44px; height: 44px; border-radius: 4px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+          <div class="t2" style="width: 78px; height: 10px"></div>
+          <div class="t3" style="width: 90px; height: 6px"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="gap: 16px">
+      <div class="col" style="gap: 8px"><div class="t2" style="width: 88px; height: 8px"></div><div class="field" style="height: 48px"><div class="t3" style="width: 132px"></div></div></div>
+      <div class="col" style="gap: 8px"><div class="t2" style="width: 62px; height: 8px"></div><div class="field" style="height: 48px; gap: 10px"><div class="ico" style="width: 30px; height: 20px"></div><div class="sep" style="width: 1px; height: 22px"></div><div class="t3" style="width: 104px"></div></div></div>
+      <div class="col" style="gap: 8px"><div class="t2" style="width: 54px; height: 8px"></div><div class="field" style="height: 48px"><div class="t3" style="width: 148px"></div></div></div>
+      <div class="col" style="gap: 8px"><div class="t2" style="width: 76px; height: 8px"></div><div class="field" style="height: 48px"><div class="t3" style="width: 92px"></div><div style="flex: 1"></div><div class="ico" style="width: 18px; height: 18px"></div></div></div>
+    </div>
+    <div class="row" style="gap: 12px; align-items: flex-start">
+      <div style="width: 20px; height: 20px; border: 1.5px solid #8a8a8a; border-radius: 2px; flex: none"></div>
+      <div class="col" style="gap: 6px; flex: 1; padding-top: 3px"><div class="t3" style="width: 100%"></div><div class="t3" style="width: 154px"></div></div>
+    </div>
+  </div>
+  <div class="col pad" style="padding-top: 16px; padding-bottom: 22px; gap: 14px; border-top: 1px solid #e6e6e6; flex: none">
+    <div class="btn" style="height: 52px"><div class="tw" style="width: 106px"></div></div>
+    <div class="row" style="justify-content: center; gap: 8px"><div class="t3" style="width: 104px"></div><div class="t1" style="width: 58px; height: 10px"></div></div>
+  </div>
+</div>
+  </div>
+  <div class="frame"><div class="label">03 - Inicio</div>
+<div class="scr">
+  <div class="row pad" style="height: 76px; gap: 12px; flex: none">
+    <div class="avat" style="width: 44px; height: 44px"></div>
+    <div class="col" style="gap: 8px; flex: 1">
+      <div class="t3" style="width: 68px; height: 7px"></div>
+      <div class="t1" style="width: 116px; height: 12px"></div>
+    </div>
+    <div class="ico" style="width: 26px; height: 26px"></div>
+  </div>
+  <div class="col pad" style="flex: 1; gap: 22px">
+    <div class="field" style="height: 50px; gap: 12px"><div class="ico" style="width: 18px; height: 18px"></div><div class="t3" style="width: 146px"></div><div style="flex: 1"></div><div class="ico" style="width: 18px; height: 18px"></div></div>
+    <div class="img" style="height: 112px; border-radius: 4px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+    <div class="col" style="gap: 16px">
+      <div class="row"><div class="t1" style="width: 112px; height: 12px"></div><div style="flex: 1"></div><div class="t3" style="width: 54px; height: 7px"></div></div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px 10px"><div class="col" style="align-items: center; gap: 9px"><div class="ico" style="width: 54px; height: 54px; border-radius: 5px"></div><div class="t3" style="width: 40px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 9px"><div class="ico" style="width: 54px; height: 54px; border-radius: 5px"></div><div class="t3" style="width: 46px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 9px"><div class="ico" style="width: 54px; height: 54px; border-radius: 5px"></div><div class="t3" style="width: 36px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 9px"><div class="ico" style="width: 54px; height: 54px; border-radius: 5px"></div><div class="t3" style="width: 44px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 9px"><div class="ico" style="width: 54px; height: 54px; border-radius: 5px"></div><div class="t3" style="width: 44px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 9px"><div class="ico" style="width: 54px; height: 54px; border-radius: 5px"></div><div class="t3" style="width: 38px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 9px"><div class="ico" style="width: 54px; height: 54px; border-radius: 5px"></div><div class="t3" style="width: 48px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 9px"><div class="ico" style="width: 54px; height: 54px; border-radius: 5px"></div><div class="t3" style="width: 34px; height: 6px"></div></div></div>
+    </div>
+    <div class="col" style="gap: 13px">
+      <div class="row"><div class="t1" style="width: 146px; height: 12px"></div><div style="flex: 1"></div><div class="t3" style="width: 54px; height: 7px"></div></div>
+      <div class="card row" style="padding: 13px; gap: 12px"><div class="avat" style="width: 56px; height: 56px"></div><div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 120px; height: 11px"></div><div class="t3" style="width: 88px"></div><div class="row" style="gap: 5px"><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="t3" style="width: 30px; height: 6px; margin-left: 4px"></div></div></div><div class="col" style="align-items: flex-end; gap: 10px; align-self: stretch; justify-content: space-between"><div class="t1" style="width: 46px; height: 10px"></div><div class="btn2" style="width: 74px; height: 30px"><div class="t2" style="width: 40px; height: 7px"></div></div></div></div>
+      <div class="card row" style="padding: 13px; gap: 12px"><div class="avat" style="width: 56px; height: 56px"></div><div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 104px; height: 11px"></div><div class="t3" style="width: 96px"></div><div class="row" style="gap: 5px"><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="t3" style="width: 30px; height: 6px; margin-left: 4px"></div></div></div><div class="col" style="align-items: flex-end; gap: 10px; align-self: stretch; justify-content: space-between"><div class="t1" style="width: 46px; height: 10px"></div><div class="btn2" style="width: 74px; height: 30px"><div class="t2" style="width: 40px; height: 7px"></div></div></div></div>
+    </div>
+  </div>
+  <div class="navbar"><div class="col" style="align-items: center; gap: 7px"><div class="icok" style="width: 24px; height: 24px"></div><div class="t1" style="width: 26px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 30px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 26px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 32px; height: 6px"></div></div></div>
+</div>
+  </div>
+  <div class="frame"><div class="label">04 - Resultados</div>
+<div class="scr">
+  <div class="row pad" style="height: 64px; gap: 12px; border-bottom: 1px solid #e6e6e6; flex: none">
+    <div class="ico" style="width: 24px; height: 24px"></div>
+    <div class="field" style="height: 40px; flex: 1; gap: 10px"><div class="ico" style="width: 16px; height: 16px"></div><div class="t3" style="width: 112px; height: 7px"></div></div>
+    <div class="ico" style="width: 24px; height: 24px"></div>
+  </div>
+  <div class="row" style="gap: 8px; padding: 14px 20px; flex: none; overflow: hidden">
+    <div class="chipOn"><div class="tw" style="width: 44px; height: 7px"></div></div>
+    <div class="chip"><div class="t2" style="width: 52px; height: 7px"></div></div>
+    <div class="chip"><div class="t2" style="width: 38px; height: 7px"></div></div>
+    <div class="chip"><div class="t2" style="width: 56px; height: 7px"></div></div>
+    <div class="chip" style="width: 24px; padding: 0"></div>
+  </div>
+  <div class="row pad" style="padding-bottom: 12px; flex: none">
+    <div class="t2" style="width: 96px; height: 8px"></div>
+    <div style="flex: 1"></div>
+    <div class="row" style="gap: 7px"><div class="t3" style="width: 58px; height: 7px"></div><div class="ico" style="width: 13px; height: 13px"></div></div>
+  </div>
+  <div class="col pad" style="flex: 1; gap: 12px">
+    <div class="card row" style="padding: 13px; gap: 12px"><div class="avat" style="width: 56px; height: 56px"></div><div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 132px; height: 11px"></div><div class="t3" style="width: 92px"></div><div class="row" style="gap: 5px"><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="t3" style="width: 30px; height: 6px; margin-left: 4px"></div></div></div><div class="col" style="align-items: flex-end; gap: 10px; align-self: stretch; justify-content: space-between"><div class="t1" style="width: 46px; height: 10px"></div><div class="btn2" style="width: 74px; height: 30px"><div class="t2" style="width: 40px; height: 7px"></div></div></div></div>
+    <div class="card row" style="padding: 13px; gap: 12px"><div class="avat" style="width: 56px; height: 56px"></div><div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 108px; height: 11px"></div><div class="t3" style="width: 106px"></div><div class="row" style="gap: 5px"><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="t3" style="width: 30px; height: 6px; margin-left: 4px"></div></div></div><div class="col" style="align-items: flex-end; gap: 10px; align-self: stretch; justify-content: space-between"><div class="t1" style="width: 46px; height: 10px"></div><div class="btn2" style="width: 74px; height: 30px"><div class="t2" style="width: 40px; height: 7px"></div></div></div></div>
+    <div class="card row" style="padding: 13px; gap: 12px"><div class="avat" style="width: 56px; height: 56px"></div><div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 146px; height: 11px"></div><div class="t3" style="width: 84px"></div><div class="row" style="gap: 5px"><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="t3" style="width: 30px; height: 6px; margin-left: 4px"></div></div></div><div class="col" style="align-items: flex-end; gap: 10px; align-self: stretch; justify-content: space-between"><div class="t1" style="width: 46px; height: 10px"></div><div class="btn2" style="width: 74px; height: 30px"><div class="t2" style="width: 40px; height: 7px"></div></div></div></div>
+    <div class="card row" style="padding: 13px; gap: 12px"><div class="avat" style="width: 56px; height: 56px"></div><div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 118px; height: 11px"></div><div class="t3" style="width: 98px"></div><div class="row" style="gap: 5px"><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="t3" style="width: 30px; height: 6px; margin-left: 4px"></div></div></div><div class="col" style="align-items: flex-end; gap: 10px; align-self: stretch; justify-content: space-between"><div class="t1" style="width: 46px; height: 10px"></div><div class="btn2" style="width: 74px; height: 30px"><div class="t2" style="width: 40px; height: 7px"></div></div></div></div>
+  </div>
+  <div class="navbar"><div class="col" style="align-items: center; gap: 7px"><div class="icok" style="width: 24px; height: 24px"></div><div class="t1" style="width: 26px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 30px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 26px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 32px; height: 6px"></div></div></div>
+</div>
+  </div>
+  <div class="frame"><div class="label">05 - Perfil del tecnico</div>
+<div class="scr">
+  <div class="img" style="height: 168px; position: relative"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg>
+    <div class="row" style="position: absolute; top: 18px; left: 20px; right: 20px"><div class="ico" style="width: 30px; height: 30px; border-radius: 15px; background: #f0f0f0"></div><div style="flex: 1"></div><div class="ico" style="width: 30px; height: 30px; border-radius: 15px; background: #f0f0f0"></div></div>
+  </div>
+  <div class="col pad" style="flex: 1; gap: 17px; min-height: 0; overflow: hidden">
+    <div class="col" style="gap: 12px; margin-top: -42px">
+      <div class="avat" style="width: 84px; height: 84px; border: 3px solid #ffffff"></div>
+      <div class="col" style="gap: 9px">
+        <div class="t1" style="width: 162px; height: 16px"></div>
+        <div class="t2" style="width: 116px"></div>
+        <div class="row" style="gap: 7px"><div class="ico" style="width: 13px; height: 13px"></div><div class="t3" style="width: 94px; height: 7px"></div></div>
+      </div>
+    </div>
+    <div class="row" style="gap: 10px">
+      <div class="card col" style="flex: 1; align-items: center; gap: 8px; padding: 13px 6px"><div class="t1" style="width: 32px; height: 13px"></div><div class="t3" style="width: 50px; height: 6px"></div></div>
+      <div class="card col" style="flex: 1; align-items: center; gap: 8px; padding: 13px 6px"><div class="t1" style="width: 26px; height: 13px"></div><div class="t3" style="width: 44px; height: 6px"></div></div>
+      <div class="card col" style="flex: 1; align-items: center; gap: 8px; padding: 13px 6px"><div class="t1" style="width: 36px; height: 13px"></div><div class="t3" style="width: 52px; height: 6px"></div></div>
+    </div>
+    <div class="row" style="gap: 26px; border-bottom: 1px solid #e0e0e0">
+      <div class="col" style="padding-bottom: 11px; border-bottom: 2px solid #2b2b2b; margin-bottom: -1px"><div class="t1" style="width: 58px; height: 9px"></div></div>
+      <div class="col" style="padding-bottom: 11px"><div class="t3" style="width: 62px; height: 9px"></div></div>
+      <div class="col" style="padding-bottom: 11px"><div class="t3" style="width: 50px; height: 9px"></div></div>
+    </div>
+    <div class="col" style="gap: 11px">
+      <div class="t1" style="width: 92px; height: 11px"></div>
+      <div class="t3" style="width: 100%"></div>
+      <div class="t3" style="width: 100%"></div>
+      <div class="t3" style="width: 58%"></div>
+    </div>
+    <div class="col" style="gap: 12px">
+      <div class="t1" style="width: 128px; height: 11px"></div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+        <div class="img" style="height: 92px; border-radius: 3px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+        <div class="img" style="height: 92px; border-radius: 3px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+        <div class="img" style="height: 92px; border-radius: 3px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+      </div>
+    </div>
+    <div class="col" style="gap: 14px">
+      <div class="row"><div class="t1" style="width: 106px; height: 11px"></div><div style="flex: 1"></div><div class="t3" style="width: 52px; height: 7px"></div></div>
+      <div class="row" style="gap: 12px; align-items: flex-start"><div class="avat" style="width: 38px; height: 38px"></div><div class="col" style="flex: 1; gap: 8px"><div class="t1" style="width: 88px; height: 9px"></div><div class="row" style="gap: 5px"><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div></div><div class="t3" style="width: 100%"></div></div></div>
+      <div class="row" style="gap: 12px; align-items: flex-start"><div class="avat" style="width: 38px; height: 38px"></div><div class="col" style="flex: 1; gap: 8px"><div class="t1" style="width: 104px; height: 9px"></div><div class="row" style="gap: 5px"><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dotOn" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div><div class="dot" style="width: 9px; height: 9px"></div></div><div class="t3" style="width: 78%"></div></div></div>
+    </div>
+  </div>
+  <div class="row pad" style="height: 86px; gap: 16px; border-top: 1px solid #d8d8d8; background: #fbfbfb; flex: none">
+    <div class="col" style="gap: 8px"><div class="t3" style="width: 44px; height: 6px"></div><div class="t1" style="width: 74px; height: 15px"></div></div>
+    <div class="btn" style="flex: 1; height: 52px"><div class="tw" style="width: 112px"></div></div>
+  </div>
+</div>
+  </div>
+  <div class="frame"><div class="label">06 - Solicitud</div>
+<div class="scr">
+  <div class="hdr pad"><div class="ico" style="width: 24px; height: 24px"></div><div class="t1" style="width: 150px"></div></div>
+  <div class="row pad" style="gap: 7px; padding-top: 14px; padding-bottom: 16px; flex: none">
+    <div style="flex: 1; height: 5px; background: #2b2b2b; border-radius: 3px"></div>
+    <div style="flex: 1; height: 5px; background: #2b2b2b; border-radius: 3px"></div>
+    <div style="flex: 1; height: 5px; background: #dcdcdc; border-radius: 3px"></div>
+  </div>
+  <div class="col pad" style="flex: 1; gap: 18px; min-height: 0; overflow: hidden">
+    <div class="card row" style="padding: 12px; gap: 12px"><div class="avat" style="width: 46px; height: 46px"></div><div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 114px; height: 10px"></div><div class="t3" style="width: 82px"></div></div><div class="ico" style="width: 16px; height: 16px"></div></div>
+    <div class="col" style="gap: 9px"><div class="t2" style="width: 128px; height: 8px"></div><div class="field" style="height: 48px"><div class="t3" style="width: 116px"></div><div style="flex: 1"></div><div class="ico" style="width: 14px; height: 14px"></div></div></div>
+    <div class="col" style="gap: 9px">
+      <div class="t2" style="width: 148px; height: 8px"></div>
+      <div class="field col" style="height: 86px; align-items: stretch; justify-content: flex-start; gap: 9px; padding-top: 13px"><div class="t3" style="width: 100%"></div><div class="t3" style="width: 100%"></div><div class="t3" style="width: 46%"></div></div>
+    </div>
+    <div class="col" style="gap: 9px">
+      <div class="t2" style="width: 104px; height: 8px"></div>
+      <div class="row" style="gap: 10px">
+        <div style="width: 86px; height: 86px; border: 1.5px dashed #b0b0b0; border-radius: 3px; display: flex; align-items: center; justify-content: center"><div class="ico" style="width: 26px; height: 26px"></div></div>
+        <div class="img" style="width: 86px; height: 86px; border-radius: 3px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+        <div class="img" style="width: 86px; height: 86px; border-radius: 3px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+      </div>
+    </div>
+    <div class="row" style="gap: 12px">
+      <div class="col" style="flex: 1; gap: 9px"><div class="t2" style="width: 44px; height: 8px"></div><div class="field" style="height: 48px"><div class="ico" style="width: 15px; height: 15px"></div><div class="t3" style="width: 62px"></div></div></div>
+      <div class="col" style="flex: 1; gap: 9px"><div class="t2" style="width: 36px; height: 8px"></div><div class="field" style="height: 48px"><div class="ico" style="width: 15px; height: 15px"></div><div class="t3" style="width: 54px"></div></div></div>
+    </div>
+    <div class="col" style="gap: 9px">
+      <div class="t2" style="width: 84px; height: 8px"></div>
+      <div class="field" style="height: 48px"><div class="ico" style="width: 15px; height: 15px"></div><div class="t3" style="width: 154px"></div></div>
+      <div class="img" style="height: 84px; border-radius: 3px"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+    </div>
+  </div>
+  <div class="col pad" style="padding-top: 14px; padding-bottom: 20px; border-top: 1px solid #e0e0e0; flex: none">
+    <div class="btn" style="height: 52px"><div class="tw" style="width: 96px"></div></div>
+  </div>
+</div>
+  </div>
+  <div class="frame"><div class="label">07 - Confirmacion y pago</div>
+<div class="scr">
+  <div class="hdr pad"><div class="ico" style="width: 24px; height: 24px"></div><div class="t1" style="width: 168px"></div></div>
+  <div class="col pad" style="flex: 1; gap: 18px; padding-top: 20px; min-height: 0; overflow: hidden">
+    <div class="card col" style="padding: 15px; gap: 15px">
+      <div class="row" style="gap: 12px"><div class="avat" style="width: 50px; height: 50px"></div><div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 122px; height: 11px"></div><div class="t3" style="width: 86px"></div></div></div>
+      <div class="sep"></div>
+      <div class="col" style="gap: 13px">
+        <div class="row"><div class="t3" style="width: 64px"></div><div style="flex: 1"></div><div class="t2" style="width: 96px; height: 9px"></div></div>
+        <div class="row"><div class="t3" style="width: 52px"></div><div style="flex: 1"></div><div class="t2" style="width: 112px; height: 9px"></div></div>
+        <div class="row"><div class="t3" style="width: 76px"></div><div style="flex: 1"></div><div class="t2" style="width: 84px; height: 9px"></div></div>
+        <div class="row"><div class="t3" style="width: 58px"></div><div style="flex: 1"></div><div class="t2" style="width: 128px; height: 9px"></div></div>
+      </div>
+    </div>
+    <div class="card col" style="padding: 15px; gap: 14px">
+      <div class="t1" style="width: 118px; height: 10px"></div>
+      <div class="row"><div class="t3" style="width: 88px"></div><div style="flex: 1"></div><div class="t2" style="width: 62px; height: 9px"></div></div>
+      <div class="row"><div class="t3" style="width: 104px"></div><div style="flex: 1"></div><div class="t2" style="width: 54px; height: 9px"></div></div>
+      <div class="row"><div class="t3" style="width: 72px"></div><div style="flex: 1"></div><div class="t2" style="width: 48px; height: 9px"></div></div>
+      <div class="sep"></div>
+      <div class="row"><div class="t1" style="width: 58px; height: 13px"></div><div style="flex: 1"></div><div class="tk" style="width: 82px"></div></div>
+    </div>
+    <div class="col" style="gap: 11px">
+      <div class="t2" style="width: 116px; height: 9px"></div>
+      <div class="row" style="gap: 12px; padding: 13px; border: 1.5px solid #2b2b2b; border-radius: 3px; background: #f2f2f2">
+        <div class="dotOn" style="width: 18px; height: 18px"></div><div class="ico" style="width: 34px; height: 24px"></div><div class="t2" style="width: 108px; height: 9px"></div>
+      </div>
+      <div class="row" style="gap: 12px; padding: 13px; border: 1px solid #d0d0d0; border-radius: 3px">
+        <div class="dot" style="width: 18px; height: 18px"></div><div class="ico" style="width: 34px; height: 24px"></div><div class="t3" style="width: 92px; height: 9px"></div>
+      </div>
+    </div>
+    <div class="row" style="gap: 10px">
+      <div class="field" style="height: 46px; flex: 1"><div class="t3" style="width: 96px"></div></div>
+      <div class="btn2" style="width: 92px; height: 46px"><div class="t2" style="width: 48px; height: 8px"></div></div>
+    </div>
+  </div>
+  <div class="col pad" style="padding-top: 14px; padding-bottom: 20px; border-top: 1px solid #e0e0e0; flex: none; gap: 12px">
+    <div class="btn" style="height: 52px"><div class="tw" style="width: 132px"></div></div>
+    <div class="t3" style="width: 216px; align-self: center; height: 7px"></div>
+  </div>
+</div>
+  </div>
+  <div class="frame"><div class="label">08 - Seguimiento</div>
+<div class="scr">
+  <div class="hdr pad"><div class="ico" style="width: 24px; height: 24px"></div><div class="t1" style="width: 142px"></div><div style="flex: 1"></div><div class="ico" style="width: 22px; height: 22px"></div></div>
+  <div class="img" style="height: 186px; position: relative"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+  <div class="col pad" style="flex: 1; gap: 20px; padding-top: 18px; min-height: 0; overflow: hidden">
+    <div class="card row" style="padding: 13px; gap: 12px">
+      <div class="avat" style="width: 50px; height: 50px"></div>
+      <div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 118px; height: 11px"></div><div class="t3" style="width: 84px"></div></div>
+      <div class="icok" style="width: 42px; height: 42px; border-radius: 21px"></div>
+      <div class="icok" style="width: 42px; height: 42px; border-radius: 21px"></div>
+    </div>
+    <div class="col" style="gap: 0">
+      <div class="row" style="gap: 14px; align-items: flex-start">
+        <div class="col" style="align-items: center; align-self: stretch"><div class="dotOn" style="width: 16px; height: 16px"></div><div style="width: 2px; flex: 1; background: #2b2b2b; min-height: 30px"></div></div>
+        <div class="col" style="flex: 1; gap: 8px; padding-bottom: 20px"><div class="t1" style="width: 124px; height: 10px"></div><div class="t3" style="width: 72px; height: 6px"></div></div>
+      </div>
+      <div class="row" style="gap: 14px; align-items: flex-start">
+        <div class="col" style="align-items: center; align-self: stretch"><div class="dotOn" style="width: 16px; height: 16px"></div><div style="width: 2px; flex: 1; background: #d0d0d0; min-height: 30px"></div></div>
+        <div class="col" style="flex: 1; gap: 8px; padding-bottom: 20px"><div class="t1" style="width: 146px; height: 10px"></div><div class="t3" style="width: 68px; height: 6px"></div></div>
+      </div>
+      <div class="row" style="gap: 14px; align-items: flex-start">
+        <div class="col" style="align-items: center; align-self: stretch"><div class="dot" style="width: 16px; height: 16px"></div><div style="width: 2px; flex: 1; background: #d0d0d0; min-height: 30px"></div></div>
+        <div class="col" style="flex: 1; gap: 8px; padding-bottom: 20px"><div class="t3" style="width: 108px; height: 10px"></div><div class="t3" style="width: 60px; height: 6px"></div></div>
+      </div>
+      <div class="row" style="gap: 14px; align-items: flex-start">
+        <div class="col" style="align-items: center"><div class="dot" style="width: 16px; height: 16px"></div></div>
+        <div class="col" style="flex: 1; gap: 8px"><div class="t3" style="width: 92px; height: 10px"></div><div class="t3" style="width: 56px; height: 6px"></div></div>
+      </div>
+    </div>
+    <div class="card col" style="padding: 14px; gap: 13px">
+      <div class="row"><div class="t3" style="width: 68px"></div><div style="flex: 1"></div><div class="t2" style="width: 104px; height: 9px"></div></div>
+      <div class="row"><div class="t3" style="width: 84px"></div><div style="flex: 1"></div><div class="t2" style="width: 76px; height: 9px"></div></div>
+      <div class="row"><div class="t3" style="width: 56px"></div><div style="flex: 1"></div><div class="tk" style="width: 68px; height: 12px"></div></div>
+    </div>
+  </div>
+  <div class="col pad" style="padding-top: 14px; padding-bottom: 20px; border-top: 1px solid #e0e0e0; flex: none">
+    <div class="btn2" style="height: 48px"><div class="t2" style="width: 118px; height: 9px"></div></div>
+  </div>
+</div>
+  </div>
+  <div class="frame"><div class="label">09 - Chat</div>
+<div class="scr">
+  <div class="hdr pad" style="gap: 12px">
+    <div class="ico" style="width: 22px; height: 22px"></div>
+    <div class="avat" style="width: 38px; height: 38px"></div>
+    <div class="col" style="flex: 1; gap: 8px"><div class="t1" style="width: 104px; height: 10px"></div><div class="t3" style="width: 52px; height: 6px"></div></div>
+    <div class="ico" style="width: 22px; height: 22px"></div>
+  </div>
+  <div class="col pad" style="flex: 1; gap: 14px; padding-top: 20px; min-height: 0; overflow: hidden">
+    <div class="t3" style="width: 78px; height: 7px; align-self: center"></div>
+    <div class="col" style="gap: 8px; max-width: 250px; padding: 13px; background: #f0f0f0; border: 1px solid #d8d8d8; border-radius: 10px 10px 10px 2px; align-self: flex-start">
+      <div class="t3" style="width: 100%"></div><div class="t3" style="width: 100%"></div><div class="t3" style="width: 62%"></div>
+    </div>
+    <div class="col" style="gap: 8px; max-width: 236px; padding: 13px; background: #3a3a3a; border-radius: 10px 10px 2px 10px; align-self: flex-end">
+      <div class="tw" style="width: 190px; height: 8px"></div><div class="tw" style="width: 132px; height: 8px"></div>
+    </div>
+    <div class="col" style="gap: 8px; max-width: 250px; padding: 13px; background: #f0f0f0; border: 1px solid #d8d8d8; border-radius: 10px 10px 10px 2px; align-self: flex-start">
+      <div class="t3" style="width: 156px"></div>
+    </div>
+    <div class="img" style="width: 168px; height: 124px; border-radius: 10px; align-self: flex-end"><svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 0L100 100M100 0L0 100" stroke="#c4c4c4" stroke-width="1" fill="none"/></svg></div>
+    <div class="col" style="gap: 8px; max-width: 250px; padding: 13px; background: #f0f0f0; border: 1px solid #d8d8d8; border-radius: 10px 10px 10px 2px; align-self: flex-start">
+      <div class="t3" style="width: 100%"></div><div class="t3" style="width: 84%"></div>
+    </div>
+    <div class="col" style="gap: 8px; max-width: 236px; padding: 13px; background: #3a3a3a; border-radius: 10px 10px 2px 10px; align-self: flex-end">
+      <div class="tw" style="width: 118px; height: 8px"></div>
+    </div>
+  </div>
+  <div class="row pad" style="height: 82px; gap: 11px; border-top: 1px solid #d8d8d8; background: #fbfbfb; flex: none">
+    <div class="ico" style="width: 26px; height: 26px"></div>
+    <div class="field" style="flex: 1; height: 46px; border-radius: 23px"><div class="t3" style="width: 108px"></div></div>
+    <div class="btn" style="width: 46px; height: 46px; border-radius: 23px"><div class="tw" style="width: 18px; height: 18px; border-radius: 3px"></div></div>
+  </div>
+</div>
+  </div>
+  <div class="frame"><div class="label">10 - Calificacion</div>
+<div class="scr">
+  <div class="hdr pad"><div class="ico" style="width: 24px; height: 24px"></div><div style="flex: 1"></div><div class="t3" style="width: 48px; height: 8px"></div></div>
+  <div class="col pad" style="flex: 1; gap: 26px; padding-top: 40px; min-height: 0; overflow: hidden">
+    <div class="col" style="gap: 14px; align-items: center">
+      <div class="avat" style="width: 88px; height: 88px"></div>
+      <div class="t1" style="width: 152px; height: 15px"></div>
+      <div class="t3" style="width: 104px"></div>
+    </div>
+    <div class="col" style="gap: 15px; align-items: center">
+      <div class="t2" style="width: 178px; height: 9px"></div>
+      <div class="row" style="gap: 12px">
+        <div style="width: 42px; height: 42px; background: #2b2b2b; border-radius: 4px"></div>
+        <div style="width: 42px; height: 42px; background: #2b2b2b; border-radius: 4px"></div>
+        <div style="width: 42px; height: 42px; background: #2b2b2b; border-radius: 4px"></div>
+        <div style="width: 42px; height: 42px; background: #2b2b2b; border-radius: 4px"></div>
+        <div style="width: 42px; height: 42px; background: #e2e2e2; border: 1px solid #c0c0c0; border-radius: 4px"></div>
+      </div>
+    </div>
+    <div class="col" style="gap: 12px">
+      <div class="t2" style="width: 142px; height: 8px"></div>
+      <div class="row" style="gap: 9px; flex-wrap: wrap">
+        <div class="chipOn"><div class="tw" style="width: 56px; height: 7px"></div></div>
+        <div class="chip"><div class="t2" style="width: 72px; height: 7px"></div></div>
+        <div class="chip"><div class="t2" style="width: 48px; height: 7px"></div></div>
+        <div class="chipOn"><div class="tw" style="width: 64px; height: 7px"></div></div>
+        <div class="chip"><div class="t2" style="width: 84px; height: 7px"></div></div>
+        <div class="chip"><div class="t2" style="width: 54px; height: 7px"></div></div>
+      </div>
+    </div>
+    <div class="col" style="gap: 10px">
+      <div class="t2" style="width: 118px; height: 8px"></div>
+      <div class="field col" style="height: 96px; align-items: stretch; justify-content: flex-start; gap: 9px; padding-top: 14px"><div class="t3" style="width: 100%"></div><div class="t3" style="width: 72%"></div></div>
+    </div>
+  </div>
+  <div class="col pad" style="padding-top: 14px; padding-bottom: 22px; border-top: 1px solid #e0e0e0; flex: none; gap: 16px">
+    <div class="btn" style="height: 52px"><div class="tw" style="width: 124px"></div></div>
+    <div class="t3" style="width: 78px; align-self: center; height: 8px"></div>
+  </div>
+</div>
+  </div>
+  <div class="frame"><div class="label">11 - Panel del tecnico</div>
+<div class="scr">
+  <div class="row pad" style="height: 78px; gap: 12px; flex: none">
+    <div class="avat" style="width: 44px; height: 44px"></div>
+    <div class="col" style="flex: 1; gap: 8px"><div class="t3" style="width: 62px; height: 7px"></div><div class="t1" style="width: 122px; height: 12px"></div></div>
+    <div class="col" style="align-items: flex-end; gap: 7px">
+      <div class="row" style="width: 50px; height: 28px; background: #2b2b2b; border-radius: 14px; justify-content: flex-end; padding-right: 3px"><div style="width: 22px; height: 22px; background: #ffffff; border-radius: 11px"></div></div>
+      <div class="t3" style="width: 48px; height: 6px"></div>
+    </div>
+  </div>
+  <div class="col pad" style="flex: 1; gap: 20px; min-height: 0; overflow: hidden">
+    <div class="row" style="gap: 10px">
+      <div class="card col" style="flex: 1; align-items: center; gap: 8px; padding: 14px 6px"><div class="t1" style="width: 26px; height: 14px"></div><div class="t3" style="width: 48px; height: 6px"></div></div>
+      <div class="card col" style="flex: 1; align-items: center; gap: 8px; padding: 14px 6px"><div class="t1" style="width: 34px; height: 14px"></div><div class="t3" style="width: 54px; height: 6px"></div></div>
+      <div class="card col" style="flex: 1; align-items: center; gap: 8px; padding: 14px 6px"><div class="t1" style="width: 30px; height: 14px"></div><div class="t3" style="width: 44px; height: 6px"></div></div>
+    </div>
+    <div class="row" style="gap: 24px; border-bottom: 1px solid #e0e0e0">
+      <div class="col" style="padding-bottom: 12px; border-bottom: 2px solid #2b2b2b; margin-bottom: -1px"><div class="t1" style="width: 62px; height: 9px"></div></div>
+      <div class="col" style="padding-bottom: 12px"><div class="t3" style="width: 56px; height: 9px"></div></div>
+      <div class="col" style="padding-bottom: 12px"><div class="t3" style="width: 60px; height: 9px"></div></div>
+    </div>
+    <div class="col" style="gap: 13px">
+      <div class="card col" style="padding: 14px; gap: 13px">
+        <div class="row" style="gap: 12px"><div class="avat" style="width: 40px; height: 40px"></div><div class="col" style="flex: 1; gap: 8px"><div class="t1" style="width: 116px; height: 10px"></div><div class="t3" style="width: 88px; height: 7px"></div></div><div class="chip" style="height: 24px"><div class="t2" style="width: 40px; height: 6px"></div></div></div>
+        <div class="row" style="gap: 16px"><div class="row" style="gap: 7px"><div class="ico" style="width: 13px; height: 13px"></div><div class="t3" style="width: 66px; height: 6px"></div></div><div class="row" style="gap: 7px"><div class="ico" style="width: 13px; height: 13px"></div><div class="t3" style="width: 82px; height: 6px"></div></div></div>
+        <div class="sep"></div>
+        <div class="row" style="gap: 10px"><div class="btn2" style="flex: 1; height: 40px"><div class="t2" style="width: 48px; height: 7px"></div></div><div class="btn" style="flex: 1; height: 40px"><div class="tw" style="width: 46px; height: 7px"></div></div></div>
+      </div>
+      <div class="card col" style="padding: 14px; gap: 13px">
+        <div class="row" style="gap: 12px"><div class="avat" style="width: 40px; height: 40px"></div><div class="col" style="flex: 1; gap: 8px"><div class="t1" style="width: 98px; height: 10px"></div><div class="t3" style="width: 104px; height: 7px"></div></div><div class="chip" style="height: 24px"><div class="t2" style="width: 34px; height: 6px"></div></div></div>
+        <div class="row" style="gap: 16px"><div class="row" style="gap: 7px"><div class="ico" style="width: 13px; height: 13px"></div><div class="t3" style="width: 72px; height: 6px"></div></div><div class="row" style="gap: 7px"><div class="ico" style="width: 13px; height: 13px"></div><div class="t3" style="width: 68px; height: 6px"></div></div></div>
+        <div class="sep"></div>
+        <div class="row" style="gap: 10px"><div class="btn2" style="flex: 1; height: 40px"><div class="t2" style="width: 48px; height: 7px"></div></div><div class="btn" style="flex: 1; height: 40px"><div class="tw" style="width: 46px; height: 7px"></div></div></div>
+      </div>
+      <div class="card col" style="padding: 14px; gap: 13px">
+        <div class="row" style="gap: 12px"><div class="avat" style="width: 40px; height: 40px"></div><div class="col" style="flex: 1; gap: 8px"><div class="t1" style="width: 128px; height: 10px"></div><div class="t3" style="width: 76px; height: 7px"></div></div><div class="chip" style="height: 24px"><div class="t2" style="width: 42px; height: 6px"></div></div></div>
+        <div class="row" style="gap: 16px"><div class="row" style="gap: 7px"><div class="ico" style="width: 13px; height: 13px"></div><div class="t3" style="width: 64px; height: 6px"></div></div><div class="row" style="gap: 7px"><div class="ico" style="width: 13px; height: 13px"></div><div class="t3" style="width: 90px; height: 6px"></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar"><div class="col" style="align-items: center; gap: 7px"><div class="icok" style="width: 24px; height: 24px"></div><div class="t1" style="width: 30px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 28px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 32px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 26px; height: 6px"></div></div></div>
+</div>
+  </div>
+  <div class="frame"><div class="label">12 - Mi cuenta</div>
+<div class="scr">
+  <div class="row pad" style="height: 74px; flex: none"><div class="t1" style="width: 128px; height: 17px"></div></div>
+  <div class="col pad" style="flex: 1; gap: 22px; min-height: 0; overflow: hidden">
+    <div class="card row" style="padding: 15px; gap: 13px">
+      <div class="avat" style="width: 60px; height: 60px"></div>
+      <div class="col" style="flex: 1; gap: 9px"><div class="t1" style="width: 132px; height: 13px"></div><div class="t3" style="width: 98px"></div><div class="t3" style="width: 76px; height: 6px"></div></div>
+      <div class="ico" style="width: 16px; height: 16px"></div>
+    </div>
+    <div class="row" style="gap: 10px">
+      <div class="card col" style="flex: 1; align-items: center; gap: 9px; padding: 15px 6px"><div class="ico" style="width: 26px; height: 26px"></div><div class="t3" style="width: 54px; height: 6px"></div></div>
+      <div class="card col" style="flex: 1; align-items: center; gap: 9px; padding: 15px 6px"><div class="ico" style="width: 26px; height: 26px"></div><div class="t3" style="width: 46px; height: 6px"></div></div>
+      <div class="card col" style="flex: 1; align-items: center; gap: 9px; padding: 15px 6px"><div class="ico" style="width: 26px; height: 26px"></div><div class="t3" style="width: 58px; height: 6px"></div></div>
+    </div>
+    <div class="col" style="gap: 12px">
+      <div class="t2" style="width: 96px; height: 8px"></div>
+      <div class="col" style="border: 1px solid #dcdcdc; border-radius: 3px">
+        <div class="row" style="height: 54px; gap: 14px; padding: 0 14px"><div class="ico" style="width: 22px; height: 22px"></div><div class="t2" style="width: 118px; height: 9px"></div><div style="flex: 1"></div><div class="ico" style="width: 13px; height: 13px"></div></div>
+        <div class="sep"></div>
+        <div class="row" style="height: 54px; gap: 14px; padding: 0 14px"><div class="ico" style="width: 22px; height: 22px"></div><div class="t2" style="width: 96px; height: 9px"></div><div style="flex: 1"></div><div class="ico" style="width: 13px; height: 13px"></div></div>
+        <div class="sep"></div>
+        <div class="row" style="height: 54px; gap: 14px; padding: 0 14px"><div class="ico" style="width: 22px; height: 22px"></div><div class="t2" style="width: 134px; height: 9px"></div><div style="flex: 1"></div><div class="ico" style="width: 13px; height: 13px"></div></div>
+        <div class="sep"></div>
+        <div class="row" style="height: 54px; gap: 14px; padding: 0 14px"><div class="ico" style="width: 22px; height: 22px"></div><div class="t2" style="width: 108px; height: 9px"></div><div style="flex: 1"></div><div class="ico" style="width: 13px; height: 13px"></div></div>
+      </div>
+    </div>
+    <div class="col" style="gap: 12px">
+      <div class="t2" style="width: 74px; height: 8px"></div>
+      <div class="col" style="border: 1px solid #dcdcdc; border-radius: 3px">
+        <div class="row" style="height: 54px; gap: 14px; padding: 0 14px"><div class="ico" style="width: 22px; height: 22px"></div><div class="t2" style="width: 88px; height: 9px"></div><div style="flex: 1"></div><div class="ico" style="width: 13px; height: 13px"></div></div>
+        <div class="sep"></div>
+        <div class="row" style="height: 54px; gap: 14px; padding: 0 14px"><div class="ico" style="width: 22px; height: 22px"></div><div class="t2" style="width: 126px; height: 9px"></div><div style="flex: 1"></div><div class="ico" style="width: 13px; height: 13px"></div></div>
+        <div class="sep"></div>
+        <div class="row" style="height: 54px; gap: 14px; padding: 0 14px"><div class="icok" style="width: 22px; height: 22px"></div><div class="tk" style="width: 102px; height: 10px"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar"><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 26px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 30px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="ico" style="width: 24px; height: 24px"></div><div class="t3" style="width: 26px; height: 6px"></div></div><div class="col" style="align-items: center; gap: 7px"><div class="icok" style="width: 24px; height: 24px"></div><div class="t1" style="width: 32px; height: 6px"></div></div></div>
+</div>
+  </div>
+</div>
+</body>
+</html>

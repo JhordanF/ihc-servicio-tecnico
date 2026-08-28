@@ -1,8 +1,22 @@
 # App de servicio técnico a domicilio · IHC 2026-2
 
-Avance de **Clase 5 — Jerarquía, layout y espaciado**.
-
 Aplicación móvil para contratar técnicos a domicilio por categoría: plomería,
+electricidad, electrónica, carpintería.
+
+## Entregables
+
+| Qué | Dónde |
+|---|---|
+| **Persona + Flujo 1 + Flujo 2** | [`persona-v01.md`](persona-v01.md) |
+| **Segundo flujo · Clase 5** (jerarquía, layout, espaciado) | [`persona-v01.md`](persona-v01.md) §4 y la decisión completa más abajo |
+| **Wireframes** (12 pantallas) | [`wireframes/wireframes-12-pantallas.html`](wireframes/wireframes-12-pantallas.html) |
+| **Escala de espaciado de 8 px** | [`lib/theme/app_spacing.dart`](lib/theme/app_spacing.dart) |
+| **Pantalla ANTES** | [`lib/screens/perfil_antes.dart`](lib/screens/perfil_antes.dart) |
+| **Pantalla DESPUÉS** | [`lib/screens/perfil_despues.dart`](lib/screens/perfil_despues.dart) |
+
+> La app abre con un selector **ANTES / DESPUÉS**. Las dos versiones muestran los
+> mismos datos: lo único que cambia es la jerarquía, el layout y el espaciado.
+
 electricidad, electrónica, carpintería.
 
 ---
